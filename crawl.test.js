@@ -24,3 +24,21 @@
 
     })
     
+    test("normalizeURLs get urls from html body" , () => {
+        const inputHtmlBody = `
+        <html>
+        <body>
+        <a href ='https://blog.boot.dev'> 
+         boot.dev Blog  
+        </a>
+        </body>
+        </html>
+        `;
+        const baseUrlInput = 'https://blog.boot.dev'
+        const actual = normalizeURLs(baseUrlInput , inputHtmlBody);
+        const expected = ['https://blog.boot.dev']
+        expect(actual).toEqual(expected);
+
+    })
+    
+   

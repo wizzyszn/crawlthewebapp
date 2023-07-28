@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start" : "node main.js"
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/wizzyszn/CrawltheWeb#readme",
   "devDependencies": {
     "jest": "^29.6.2"
+  },
+  "dependencies": {
+    "jsdom": "^22.1.0"
   }
 }
