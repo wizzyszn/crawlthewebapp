@@ -1,0 +1,23 @@
+{
+  "name": "crawltheweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start" : "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wizzyszn/CrawltheWeb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wizzyszn/CrawltheWeb/issues"
+  },
+  "homepage": "https://github.com/wizzyszn/CrawltheWeb#readme",
+  "devDependencies": {
+    "jest": "^29.6.2"
+  }
+}
