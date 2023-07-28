@@ -1,16 +1,13 @@
 const {JSDOM} = require('jsdom')
-
-function getUrlsFromHtmlBody(baseUrl , htmlBody){
-
+function getURLsFromHtmlBody(baseUrl , htmlBody){
     const url = [];
     const dom = new JSDOM(htmlBody);
     const linkElements = dom.window.document.querySelectorAll('a');
     for(let linkElement of linkElements){
-       console.log(linkElement.href);
+        url.push(linkElement.href)
 
-     }
- return url
-
+    }
+    return url;
 }
 
 function normalizeURLs(urlString){
@@ -27,4 +24,5 @@ function normalizeURLs(urlString){
 
 module.exports ={
     normalizeURLs,
+    getURLsFromHtmlBody
 }   
