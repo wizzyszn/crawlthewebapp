@@ -40,3 +40,17 @@
     const expected = ["https://blog.boot.dev/path"]
     expect(actual).toEqual(expected)
    })
+
+   test( "getURLsFromHTML relative", () => {
+    const baseURls = `https://blog.boot.dev`;
+    const inputUrls = `
+    <html>
+    <body>
+    <a href = "/path/" > boot.dev Blog </a>
+    </body>
+    </html>
+    `
+    const actual = getURLsFromHtmlBody(baseURls , inputUrls)
+    const expected = ["https://blog.boot.dev/path/"]
+    expect(actual).toEqual(expected)
+   })

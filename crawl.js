@@ -4,8 +4,16 @@ function getURLsFromHtmlBody(baseUrl , htmlBody){
     const dom = new JSDOM(htmlBody);
     const linkElements = dom.window.document.querySelectorAll('a');
     for(let linkElement of linkElements){
-        url.push(linkElement.href)
-
+        if(linkElement.href.slice(0,1) === '/'){
+            //relatie URL
+            url.push(`${baseUrl}${linkElement.href}`)
+        }
+        else{
+            //absolute Urls
+            url.push(linkElement.href)
+        }
+       
+ 
     }
     return url;
 }
